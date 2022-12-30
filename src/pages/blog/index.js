@@ -1,7 +1,8 @@
 import * as React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
+import { LocalizedLink as Link } from '@ericcote/gatsby-theme-i18n'
 
 const BlogPage = ({ data }) => {
 	return (
@@ -25,8 +26,9 @@ const BlogPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query {
-    allMdx(sort: { frontmatter: { date: DESC }}) {
+  query ($locale: String) {
+    allMdx(sort: { frontmatter: { date: DESC }}
+    filter: {fields: {locale: {eq: $locale}}}) {
       nodes {
         frontmatter {
           date(formatString: "MMMM D, YYYY")

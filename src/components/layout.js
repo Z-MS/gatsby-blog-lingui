@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
+import { LocalizedLink as Link } from '@ericcote/gatsby-theme-i18n'
 import { 
 	container,
   heading,

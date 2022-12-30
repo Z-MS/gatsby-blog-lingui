@@ -17,6 +17,7 @@
     "compile": "lingui compile"
   },
   "dependencies": {
+    "@ericcote/gatsby-theme-i18n": "^4.1.12",
     "@lingui/cli": "^3.15.0",
     "@lingui/core": "^3.15.0",
     "@lingui/macro": "^3.15.0",
