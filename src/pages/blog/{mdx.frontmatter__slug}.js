@@ -5,7 +5,7 @@ import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 
 const BlogPost = ({ data, children }) => {
-	console.log(data)
+	console.log(children)
 	const image = getImage(data.mdx.frontmatter.hero_image)
 	return (
 		<Layout pageTitle={data.mdx.frontmatter.title}>
@@ -26,22 +26,22 @@ const BlogPost = ({ data, children }) => {
 }
 
 export const query = graphql`
-	query ($slug: String, $locale: String) {
-  mdx(fields: {locale: {eq: $locale}}, frontmatter: {slug: {eq: $slug}}) {
-    frontmatter {
-      title
-      date(formatString: "MMMM D, YYYY")
-      hero_image_alt
-      hero_image_credit_link
-      hero_image_credit_text
-      hero_image {
-        childImageSharp {
-          gatsbyImageData
-        }
-      }
-    }
-  }
-}
+	query ($locale: String, $id: String) {
+  	mdx(fields: {locale: {eq: $locale}}, id: {eq: $id}) {
+    	frontmatter {
+    	  title
+    	  date(formatString: "MMMM D, YYYY")
+    	  hero_image_alt
+    	  hero_image_credit_link
+    	  hero_image_credit_text
+    	  hero_image {
+        	childImageSharp {
+          	gatsbyImageData
+        	}
+      	}
+    	}
+  	}
+	}
 `
 
 export const Head = ({ data }) => <Seo title={data.mdx.frontmatter.title} />
