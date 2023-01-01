@@ -6,15 +6,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: de\n"
+"Project-Id-Version: gatsby-blog\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-01-01 08:08\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: gatsby-blog\n"
 "X-Crowdin-Project-ID: 557787\n"
 "X-Crowdin-Language: de\n"
 "X-Crowdin-File: /main/i18n/lingui/en/messages.po\n"
 "X-Crowdin-File-ID: 47\n"
-"Project-Id-Version: gatsby-blog\n"
-"Language-Team: German\n"
-"PO-Revision-Date: 2022-12-31 20:00\n"
+
+#: src/components/layout.js:31
+msgid "About"
+msgstr ""
+
+#: src/components/layout.js:32
+msgid "Blog"
+msgstr ""
+
+#: src/components/layout.js:30
+msgid "Home"
+msgstr ""
 
 #: src/components/layout.js:36
 msgid "{pageTitle}"
