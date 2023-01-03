@@ -1,7 +1,7 @@
 {
-  "About": "",
-  "Blog": "",
-  "Home": "",
-  "home.title": "",
-  "{pageTitle}": ""
+  "About": "Über",
+  "Blog": "Bloggen",
+  "Home": "Zuhause",
+  "home.title": "Startseite",
+  "{pageTitle}": "{pageTitle}"
 }
