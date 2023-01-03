@@ -3,12 +3,16 @@ import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
 import { useLocalization } from 'gatsby-theme-i18n'
+import { t } from '@lingui/macro'
 
 const IndexPage = () => {
   const { locale, defaultLang, config } = useLocalization()
   return (
     <main>
-      <Layout pageTitle="Home Page">
+      <Layout pageTitle={t({
+        id: 'home.title',
+        message: 'Home Page'
+      })}>
         <p>I'm making this by following the Gatsby Tutorial.</p>
         <StaticImage
           alt="Gatsby logo"
